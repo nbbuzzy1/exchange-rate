@@ -3,15 +3,17 @@ const initialState = {
 	currencyCode: 'USD'
 }
 
-const ratesReducer = (state = initialState, action) => {
+export const ratesReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case 'amountChanged':
+		case 'rates/amountChanged':
 			return { ...state, amount: action.payload };
-		case 'currencyCodeChanged':
+		case 'rates/currencyCodeChanged':
 			return { ...state, currencyCode: action.payload };
 		default:
 			return state;
 	}
 }
 
-export default ratesReducer;
+//selectors
+export const getAmount = state => state.rates.amount;
+export const getCurrencyCode = state => state.rates.currencyCode;

@@ -3,8 +3,9 @@ const initialState = {
 	loggedIn: false
 }
 
-const userReducer = (state = initialState, action) => {
+export const userReducer = (state = initialState, action) => {
 	return state;
 }
 
-export default userReducer;
+//selectors
+export const getName = state => state.user.name;
