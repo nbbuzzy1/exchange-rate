@@ -6,8 +6,7 @@ import { AmountField } from "./AmountField";
 import {
 	getAmount,
 	getCurrencyCode,
-	getCurrencyData,
-	supportedCurrencies
+	getCurrencyData
 } from '../store/rates';
 
 export function ExchangeRate() {
@@ -21,7 +20,6 @@ export function ExchangeRate() {
 				<h1 className="ExchangeRate-header">
 					Exchange Rates{" "}
 					<CurrencyCodePicker
-						supportedCurrencies={supportedCurrencies}
 						currencyCode={currencyCode}
 					/>
 				</h1>
